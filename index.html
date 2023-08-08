@@ -7,8 +7,15 @@
     integrity="sha512-Z/def5z5u2aR89OuzYcxmDJ0Bnd5V1cKqBEbvLOiUNWdg9PQeXVvXLI90SE4QOHGlfLqUnDNVAYyZi8UwUTmWQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="bootstrap-icons.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <style>
+  * {
+    font-family: 'Montserrat', sans-serif;
+  }
+
   .position-relative {
     position: relative;
   }
@@ -46,7 +53,7 @@
   }
 
   .overlay::after {
-    content: "Software Architect";
+    content: "Founder Of Elitez Tech";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -80,69 +87,90 @@
   .bg-custom {
     background-color: #33495F;
   }
+
+  div::-webkit-scrollbar {
+    height: 5px !important;
+    width: 5px;
+  }
+
+  div::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  div::-webkit-scrollbar-thumb {
+    background: #1C62D0;
+    border-radius: 2px;
+  }
+
+  div::-webkit-scrollbar-thumb:hover {
+    background: #1C62D0;
+  }
 </style>
 
 <body>
   <div class="p-5">
     <div class="row">
-      <div class="col-5">
-        <p class="text-primary py-2 fw-bolder" style="font-size: 75px;">Sharaf Mansour</p>
-        <h2 class="text-primary py-2 fs-4">Lord, Innovator, Software Architect and Entrepreneur.</h2>
-        <h2 class="text-secondary py-2 fs-5">Talks about #blazor, #dotnet, #github, #opensource, and
-          #softwarearchitecture</h3>
-          <div class="bg-light p-4 my-5">
-            <h2 class="fs-5">
-              Biography
-            </h2>
-            <p class="fs-6">
-              Sharaf El Dean Mohamed is an Innovator, Software Architect, and Entrepreneur.
-              He is the Owner and Founder of Elitez Tech, a Software Development Company.
-              Sharaf's goal is to raise his staff to positions of enormous power in order to develop and shape the
-              future. With over 20 years of industry expertise and a dedication to continuous learning, he excels on
-              Software Architecture. At the age of 22, he worked as a Software Engineering consultant for the Egyptian
-              government and the private sector. He is a founder of two independent startup businesses. One for software
-              development and the other for software automation, as he is always looking to start new businesses in
-              order to sell them.
-              Sharaf began his IT profession at a young age and has sold over seven completely integrated solutions in
-              the previous eight months. (2023), with a revenue estimate of 16.5 thousand euros.
-            </p>
-          </div>
-          <div class="bg-custom p-5 text-center border-15 my-3">
-            <iframe class="w-100" height="315" src="https://www.youtube.com/embed/0t8gsTDkNvo"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-          </div>
-          <div class="row my-2">
-            <div class="col-4">
-              <a class="link" href="SlideDeck.pdf" target="_blank">View Pitch Deck<i class="bi bi-link-45deg"></i></a>
+      <div class="col-5 overflow-y-scroll" dir="rtl" style="max-height: 90vh;">
+        <div dir="ltr" class="ms-4">
+          <p class="text-primary fw-bolder" style="font-size: 55px;">Sharaf Mansour</p>
+          <h2 class="text-primary fs-3">Lord, Innovator, Software Architect and Entrepreneur.</h2>
+          <h2 class="text-secondary py-2 fs-4">Talks about #blazor, #dotnet, #github, #opensource, and
+            #softwarearchitecture</h3>
+            <div class="bg-light p-4 my-4">
+              <h2 class="fs-5">
+                Biography
+              </h2>
+              <p class="fs-6">
+                Sharaf El Dean Mohamed is an Innovator, Software Architect, and Entrepreneur.
+                He is the Owner and Founder of Elitez Tech, a Software Development Company.
+                Sharaf's goal is to raise his staff to positions of enormous power in order to develop and shape the
+                future. With over 20 years of industry expertise and a dedication to continuous learning, he excels on
+                Software Architecture. At the age of 22, he worked as a Software Engineering consultant for the Egyptian
+                government and the private sector. He is a founder of two independent startup businesses. One for
+                software
+                development and the other for software automation, as he is always looking to start new businesses in
+                order to sell them.
+                Sharaf began his IT profession at a young age and has sold over seven completely integrated solutions in
+                the previous eight months. (2023), with a revenue estimate of 16.5 thousand euros.
+              </p>
             </div>
-            <div class="col-4">
-              <a class="link" href="https://www.youtube.com/watch?v=0t8gsTDkNvo" target="_blank">View Pitch
-                Video<i class="bi bi-link-45deg"></i></a>
+            <div class="bg-custom p-5 text-center border-15 my-3">
+              <iframe class="w-100" height="315" src="https://www.youtube.com/embed/0t8gsTDkNvo"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
             </div>
-          </div>
-          <div class="row text-center fs-1 my-5">
-            <div class="link-card p-2 m-2 bg-light">
-              <a class="text-dark" href="https://github.com/Sharaf-Mansour" target="_blank"><i
-                  class="bi bi-github fs-1 text-fill"></i></a>
+            <div class="row my-2">
+              <div class="col-4">
+                <a class="link" href="SlideDeck.pdf" target="_blank">View Pitch Deck<i class="bi bi-link-45deg"></i></a>
+              </div>
+              <div class="col-4">
+                <a class="link" href="https://www.youtube.com/watch?v=0t8gsTDkNvo" target="_blank">View Pitch
+                  Video<i class="bi bi-link-45deg"></i></a>
+              </div>
             </div>
-            <div class="link-card p-2 m-2 bg-light">
-              <a class="text-dark" href="https://www.facebook.com/LordArora" target="_blank"><i
-                  class="bi bi-facebook fs-1 text-fill"></i></a>
+            <div class="row text-center fs-1 my-5">
+              <div class="link-card p-2 m-2 bg-light">
+                <a class="text-dark" href="https://github.com/Sharaf-Mansour" target="_blank"><i
+                    class="bi bi-github fs-1 text-fill"></i></a>
+              </div>
+              <div class="link-card p-2 m-2 bg-light">
+                <a class="text-dark" href="https://www.facebook.com/LordArora" target="_blank"><i
+                    class="bi bi-facebook fs-1 text-fill"></i></a>
+              </div>
+              <div class="link-card p-2 m-2 bg-light">
+                <a class="text-dark" href="https://www.linkedin.com/in/sharaf-mansour-4a16941b0/" target="_blank"><i
+                    class="bi bi-linkedin fs-1 text-fill"></i></a>
+              </div>
+              <div class="link-card p-2 m-2 bg-light">
+                <a class="text-dark" href="https://www.youtube.com/@SharafMansour" target="_blank"><i
+                    class="bi bi-youtube fs-1 text-fill"></i></a>
+              </div>
             </div>
-            <div class="link-card p-2 m-2 bg-light">
-              <a class="text-dark" href="https://www.linkedin.com/in/sharaf-mansour-4a16941b0/" target="_blank"><i
-                  class="bi bi-linkedin fs-1 text-fill"></i></a>
-            </div>
-            <div class="link-card p-2 m-2 bg-light">
-              <a class="text-dark" href="https://www.youtube.com/@SharafMansour" target="_blank"><i
-                  class="bi bi-youtube fs-1 text-fill"></i></a>
-            </div>
-          </div>
+        </div>
       </div>
       <div class="col-1"></div>
-      <div class="col-6">
+      <div class="col-6 text-center m-auto">
         <div class="bg-primary border-40 px-3 w-100">
           <div class="position-relative">
             <img src="pic.jpg" class="w-100 h-100 border-40">
