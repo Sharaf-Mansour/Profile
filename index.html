@@ -10,7 +10,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 </head>
+
 <style>
   * {
     font-family: 'Montserrat', sans-serif;
@@ -34,6 +37,11 @@
 
   }
 
+  .bg-primary2 {
+    background-color: #1C62D0 !important;
+
+  }
+
   .bg-light {
     background-color: #E4EAED !important;
     border-radius: 15px;
@@ -50,6 +58,10 @@
 
   .border-15 {
     border-radius: 15px !important;
+  }
+
+  .border-5 {
+    border-radius: 5px !important;
   }
 
   .overlay::after {
@@ -117,10 +129,10 @@
           <h2 class="text-secondary py-2 fs-4">Talks about #blazor, #dotnet, #github, #opensource, and
             #softwarearchitecture</h3>
             <div class="bg-light p-4 my-4">
-              <h2 class="fs-5">
+              <h2 class="fs-5 text-primary fw-medium">
                 Biography
               </h2>
-              <p class="fs-6">
+              <p class="fs-6 fw-medium">
                 Sharaf El Dean Mohamed is an Innovator, Software Architect, and Entrepreneur.
                 He is the Owner and Founder of Elitez Tech, a Software Development Company.
                 Sharaf's goal is to raise his staff to positions of enormous power in order to develop and shape the
@@ -134,12 +146,142 @@
                 the previous eight months. (2023), with a revenue estimate of 16.5 thousand euros.
               </p>
             </div>
-            <div class="bg-custom p-5 text-center border-15 my-3">
-              <iframe class="w-100" height="315" src="https://www.youtube.com/embed/0t8gsTDkNvo"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+            <div class="bg-light p-4 my-4">
+              <h2 class="fs-5 text-primary fw-medium">
+                Portfolio
+              </h2>
+              <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner bg-primary2 p-2 border-15">
+                  <div id="s1" class="carousel-item active">
+                    <img src="1.png" class="d-block border-15 w-100" alt="Slide 1">
+                    <div class="carousel-caption d-none d-md-block text-start bg-primary2 w-100 start-0 bottom-0 ps-4 ">
+                      <h5 class="fw-medium">BabyCare</h5>
+                    </div>
+                  </div>
+                  <div id="s2" class="carousel-item ">
+                    <img src="2.png" class="d-block border-15 w-100" alt="Slide 2">
+                    <div class="carousel-caption d-none d-md-block text-start bg-primary2 w-100 start-0 bottom-0 ps-4 ">
+                      <h5 class="fw-bolder">EasyCast</h5>
+                    </div>
+                  </div>
+                  <div id="s3" class="carousel-item ">
+                    <img src="3.png" class="d-block border-15 w-100" alt="Slide 3">
+                    <div class="carousel-caption d-none d-md-block text-start bg-primary2 w-100 start-0 bottom-0 ps-4 ">
+                      <h5 class="fw-bolder">CyberSender</h5>
+                    </div>
+                  </div>
+                  <div id="s4" class="carousel-item ">
+                    <img src="4.png" class="d-block border-15 w-100" alt="Slide 4">
+                    <div class="carousel-caption d-none d-md-block text-start bg-primary2 w-100 start-0 bottom-0 ps-4 ">
+                      <h5 class="fw-bolder">CVBuilder</h5>
+                    </div>
+                  </div>
+                  <div id="s5" class="carousel-item ">
+                    <img src="5.png" class="d-block border-15 w-100" alt="Slide 5">
+                    <div class="carousel-caption d-none d-md-block text-start bg-primary2 w-100 start-0 bottom-0 ps-4 ">
+                      <h5 class="fw-bolder">ElitesGG</h5>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev h-25 m-auto" type="button">
+                  <i class="bi bi-caret-left-fill fw-bolder fs-2 bg-primary2 p-2 border-5"></i>
+                </button>
+                <button class="carousel-control-next h-25 m-auto" type="button">
+                  <i class="bi bi-caret-right-fill fw-bolder fs-2 bg-primary2 p-2 border-5"></i>
+                </button>
+              </div>
+              <script>
+                // Get references to the buttons and slides
+                // Get references to the buttons
+                var prevBtn = document.querySelector('.carousel-control-prev');
+                var nextBtn = document.querySelector('.carousel-control-next');
+                var slide1 = document.querySelector('#s1');
+                var slide2 = document.querySelector('#s2');
+                var slide3 = document.querySelector('#s3');
+                var slide4 = document.querySelector('#s4');
+                var slide5 = document.querySelector('#s5');
+
+                // Initialize the current slide index
+                var currentSlide = 1;
+
+                // Bind click event handlers to the buttons
+                prevBtn.addEventListener('click', function () {
+                  // Hide the current slide
+                  hideSlide(currentSlide);
+
+                  // Move to the previous slide
+                  currentSlide--;
+                  if (currentSlide < 1) {
+                    currentSlide = 5;
+                  }
+
+                  // Show the new slide
+                  showSlide(currentSlide);
+                });
+                nextBtn.addEventListener('click', function () {
+                  // Hide the current slide
+                  hideSlide(currentSlide);
+
+                  // Move to the next slide
+                  currentSlide++;
+                  if (currentSlide > 5) {
+                    currentSlide = 1;
+                  }
+
+                  // Show the new slide
+                  showSlide(currentSlide);
+                });
+
+                // Function to hide a slide
+                function hideSlide(slideIndex) {
+                  switch (slideIndex) {
+                    case 1:
+                      slide1.classList.remove('active');
+                      break;
+                    case 2:
+                      slide2.classList.remove('active');
+                      break;
+                    case 3:
+                      slide3.classList.remove('active');
+                      break;
+                    case 4:
+                      slide4.classList.remove('active');
+                      break;
+                    case 5:
+                      slide5.classList.remove('active');
+                      break;
+                  }
+                }
+
+                // Function to show a slide
+                function showSlide(slideIndex) {
+                  switch (slideIndex) {
+                    case 1:
+                      slide1.classList.add('active');
+                      break;
+                    case 2:
+                      slide2.classList.add('active');
+                      break;
+                    case 3:
+                      slide3.classList.add('active');
+                      break;
+                    case 4:
+                      slide4.classList.add('active');
+                      break;
+                    case 5:
+                      slide5.classList.add('active');
+                      break;
+                  }
+                }
+              </script>
             </div>
+            <iframe class="w-100 text-center border-15 my-3" height="415"
+              src="https://www.youtube.com/embed/0t8gsTDkNvo" title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+              <div class="w-100 text-center border-15 my-3 bg-light py-5">
+                <h1>Elvator Pitch Coming Soon!</h1>
+              </div>
             <div class="row my-2">
               <div class="col-4">
                 <a class="link" href="SlideDeck.pdf" target="_blank">View Pitch Deck<i class="bi bi-link-45deg"></i></a>
@@ -180,6 +322,9 @@
       </div>
     </div>
   </div>
+  <script>
+
+  </script>
 </body>
 
 </html>
